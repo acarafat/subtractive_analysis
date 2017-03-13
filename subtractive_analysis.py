@@ -13,7 +13,7 @@ def do_qblast(query_file, prg = 'blastp', db = 'env_nr', org = '', e=0.0001):
     blast_handle =  NCBIWWW.qblast(program=prg, database=db, 
                                      sequence=query, 
                                      entrez_query=org, expect=e)
-    record_file = open('blast_tmp_record.xml','w'
+    record_file = open('blast_tmp_record.xml','w')
     record_file.write(blast_handle.read())
     record_file.close()
     print 'BLAST successful for', query_file
@@ -36,11 +36,17 @@ def check_gut_orthologs(query_file):
     
     
 # Check orthologus human proteins
-def check_human_proteome(query_list):
+def check_human_proteome(query_file):
     '''Do BLAST, find sequence with no orthologs in database, 
     keep those non-orthologs in a list.'''
-    do_qblast()
-    pass
+    do_qblast(query_file, 'blastp', 'nr', 'txid9606', 0.0001)
+    blast_records = NCBIXML.parse(open('blast_tmp_record.xml'))
+    not_human_orthologs = []
+    for record in blast_records:
+        print len(record.descriptions), 'hits for', record.query
+        if len(record.descriptions) == 0:
+            not_human_orthologs.append(record.query)
+    return not_human_orthologs            
 
 
 # Filter sequences
@@ -57,11 +63,16 @@ def filter_seqs(file_in, seq_list):
 
 
 if __name__ == '__main__':
-    query_in = '../Data/Gut_test/not_gutflora.fasta'
+    query_in = '../Data/homolog_test/human homolog.fasta'
     
     # Gut ortholog screening
     non_orthologs_list = check_gut_orthologs(query_in)
-    non_gut_orthologs = open('non_gut_orthologs.fasta','w')
     SeqIO.write(filter_seqs(query_in, non_orthologs_list), 
-                open('non_gut_orthologs.fasta','w'), 'fasta')
+                open('2_non_gut_orthologs.fasta','w'), 'fasta')
+                
+    # Human ortholog screening
+    non_human_ortholog_list = check_human_proteome('2_non_gut_orthologs.fasta')
+    SeqIO.write(filter_seqs(query_in, non_human_ortholog_list), 
+                open('3_non_human_orthologs.fasta','w'), 'fasta')
+    
     

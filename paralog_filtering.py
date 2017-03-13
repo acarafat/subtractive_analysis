@@ -3,6 +3,11 @@
 # V0.1
 # February 2017
 
+'''This script works on CD-HIT output.
+CD-Hit is an web server for homolog sequence clustering. One output file of 
+CD-Hit contains paralog sequence id in cluster. This script mine that output file,
+find the unique sequence, and filter out those sequences from query in file.'''
+
 from Bio import SeqIO
 
 ######################################
@@ -42,4 +47,4 @@ def filter_seqs(file_in, seq_list):
 if __name__ == '__main__':
     clust_rep = unique_in_cluster('../Data/1488219032.result/1488219032.fas.1.clstr.sorted')
     unique_seqs = filter_seqs('../Data/GCF_000283715.1_ASM28371v1_protein.faa', clust_rep)
-    SeqIO.write(unique_seqs, open('no_paralogs.fasta', 'w'), 'fasta')
+    SeqIO.write(unique_seqs, open('1_no_paralogs.fasta', 'w'), 'fasta')
