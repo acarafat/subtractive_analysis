@@ -2,7 +2,7 @@
 This tool use a robust subtractive approach to find novel therapeutic targets in bacteria. Starting with whole proteome of a pathogenic bacteria, it can find orthologs and paralogs of human and gut-microflora, filter those match out and reports protein targets that are unique to the pathogenic bacteria only. Those targets can be validated using in the down-stream wet-lab analysis. 
 
 ## Publication
-Title: *Identification and Qualitative Characterization of Novel Therapeutic Targets in Stenotrophomonas maltophilia through in silico Proteome Exploration*
+Title: *Identification and Qualitative Characterization of Novel Therapeutic Targets in Stenotrophomonas maltophilia through in silico Proteome Exploration*<br />
 Authors: Ram Prosad Chakrabarty, A. S. M. Rubayet-Ul-Alam, Arafat Rahman, Dipok Kumer <br />
 Year: 2019 <br />
 Status: **Manuscript under preparation** <br />
@@ -40,4 +40,4 @@ Email: arafat@nstu.edu.bd
 >
 >The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 >
->THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A >PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN >ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.```
+>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A >PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN >ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
