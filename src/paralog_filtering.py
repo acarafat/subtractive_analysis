@@ -10,7 +10,7 @@ find the unique sequence, and filter out those sequences from query in file.
 Requriements: 
     Python 2.7
 Running from commandline: 
-    `python subtractive_analysis.py input.fas.1.clstr.sorted CDHit_input.fasta`    
+    `python paralog_filtering.py input.fas.1.clstr.sorted CDHit_input.fasta`    
 Example:
     CDHit analysis has several outputs. This file work on files with *.fas.1.clstr.sorted 
     extension. This output from CDHit report a cluster of fasta ids from fasta file 

@@ -21,7 +21,7 @@ Python libraries that must be installed includes: Biopython 1.68 <br />
 3. Submit the filtered proteome file CDHit_input.fasta in CDHit [web-server](http://weizhong-lab.ucsd.edu/cdhit-web-server/cgi-bin/index.cgi?cmd=cd-hit) 
 4. Download and extract output files. 
 5. CDHit analysis has several outputs. This program work on files with *.fas.1.clstr.sorted extension. This output from CDHit report a cluster of fasta ids from fasta file submited to CDHit. This code takes one sequence id from each paralog cluster, and then extract the sequence of the selected id from fasta file submitted to CDHit. The following code mines on CDHit_input.fasta using the sequence ids from input.fas.1.clstr.sorted file and generate 1.no_paralogs.fasta file as output. <br />
-`python subtractive_analysis.py input.fas.1.clstr.sorted CDHit_input.fasta` 
+`python paralog_filtering.py input.fas.1.clstr.sorted CDHit_input.fasta` 
 6. Then run subtractive_analysis.py on 1_no_paralog.fasta It will generate file 2_non_gut_orthologs.fasta and 3_non_human_orthologs.fasta. Running following code on this script will run query of a set of amino acid sequences on NCBI database to find non-gut microbial and non-human orthologous sequences. The default parameters are env_nr database in blastp program with 0.0001 e-value. This is the most time consuming step which depends on how busy is server. It also creates blast_tmp_record.xml file as a temporary file. <br />
 `python subtractive_analysis.py input.fasta`
 
