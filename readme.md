@@ -5,7 +5,7 @@ This tool use a robust subtractive approach to find novel therapeutic targets in
 Title: *Identification and Qualitative Characterization of Novel Therapeutic Targets in Stenotrophomonas maltophilia through in silico Proteome Exploration*<br />
 Authors: Ram Prosad Chakrabarty, A. S. M. Rubayet-Ul-Alam, Dipok Kumer, Arafat Rahman <br />
 Year: 2019 <br />
-Status: **Manuscript under preparation** <br />
+Status: **Manuscript under review** <br />
 
 
 ## Requirements
