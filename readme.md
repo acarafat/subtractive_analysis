@@ -1,12 +1,8 @@
 # Subtractive analysis
 This tool use a robust subtractive approach to find novel therapeutic targets in bacteria. Starting with whole proteome of a pathogenic bacteria, it can find orthologs and paralogs of human and gut-microflora, filter those match out and reports protein targets that are unique to the pathogenic bacteria only. Those targets can be validated using in the down-stream wet-lab analysis. 
 
-## Publication
-Title: *Identification and Qualitative Characterization of Novel Therapeutic Targets in Stenotrophomonas maltophilia through in silico Proteome Exploration*<br />
-Authors: Ram Prosad Chakrabarty, A. S. M. Rubayet-Ul-Alam, Dipok Kumer, Arafat Rahman <br />
-Year: 2020 <br />
-Status: Published in Microbial Pathogenesis <br />
-Please cite: Chakrabarty RP, Alam AR, Shill DK, Rahman A. Identification and qualitative characterization of new therapeutic targets in Stenotrophomonas maltophilia through in silico proteome exploration. Microbial Pathogenesis. 2020 Jun 10:104293.
+## Publication (Plese Cite)
+Chakrabarty RP, Alam AR, Shill DK, Rahman A. Identification and qualitative characterization of new therapeutic targets in Stenotrophomonas maltophilia through in silico proteome exploration. Microbial Pathogenesis. 2020 Jun 10:104293.
 
 
 ## Requirements
