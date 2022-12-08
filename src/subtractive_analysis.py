@@ -35,8 +35,8 @@ def do_qblast(query_file, prg = 'blastp', db = 'env_nr', org = '', e=0.0001):
     record_file = open('blast_tmp_record.xml','w')
     record_file.write(blast_handle.read())
     record_file.close()
-    print 'BLAST successful for', query_file
-    print 'Output saved in "blast_tmp_record.xml"'
+    print('BLAST successful for', query_file)
+    print('Output saved in "blast_tmp_record.xml"')
     pass
                                              
 
@@ -48,7 +48,7 @@ def check_gut_orthologs(query_file):
     blast_records = NCBIXML.parse(open('blast_tmp_record.xml'))
     not_gut_orthologs = []            
     for record in blast_records:
-        print len(record.descriptions), 'hits for', record.query
+        print(len(record.descriptions), 'hits for', record.query)
         if len(record.descriptions) == 0:
             not_gut_orthologs.append(record.query)
     return not_gut_orthologs
@@ -62,7 +62,7 @@ def check_human_proteome(query_file):
     blast_records = NCBIXML.parse(open('blast_tmp_record.xml'))
     not_human_orthologs = []
     for record in blast_records:
-        print len(record.descriptions), 'hits for', record.query
+        print(len(record.descriptions), 'hits for', record.query)
         if len(record.descriptions) == 0:
             not_human_orthologs.append(record.query)
     return not_human_orthologs            
@@ -85,18 +85,18 @@ if __name__ == '__main__':
     query_in = sys.argv[1]
     
     # Gut ortholog screening
-    print 'Checking for gut orthologs ...'
+    print('Checking for gut orthologs ...')
     non_orthologs_list = check_gut_orthologs(query_in)
-    print 'Writing non-gut orthologs output ...'
+    print('Writing non-gut orthologs output ...')
     SeqIO.write(filter_seqs(query_in, non_orthologs_list), 
                 open('../output/2.non_gut_orthologs.fasta','w'), 'fasta')
                 
     # Human ortholog screening
-    print 'Screening human orthologs ...'
+    print('Screening human orthologs ...')
     non_human_ortholog_list = check_human_proteome('../output/2.non_gut_orthologs.fasta')
-    print 'Writing non-human orthologs output ...'
+    print('Writing non-human orthologs output ...')
     SeqIO.write(filter_seqs(query_in, non_human_ortholog_list), 
                 open('../output/3.non_human_orthologs.fasta','w'), 'fasta')
-    print 'Done.'
+    print('Done.')
     
     
