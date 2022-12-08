@@ -6,8 +6,6 @@ This tool use a robust subtractive approach to find novel therapeutic targets in
 
 
 ## Requirements
-Linux or MacOS <br />
-Python version 2.7 <br />
 Python libraries that must be installed includes: Biopython 1.68 <br />
 
 
