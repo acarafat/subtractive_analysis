@@ -24,7 +24,6 @@ Python libraries that must be installed includes: Biopython 1.68 <br />
 
 ## Discussion and bug reports
 Bug Issues: https://github.com/acarafat/subtractive_analysis/issues <br />
-Email: arafat@nstu.edu.bd
 
 
 ## License announcement
